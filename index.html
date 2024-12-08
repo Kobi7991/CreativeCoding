@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./resource/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono&family=Syne:wght@400..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<meta name="viewport" contant="width=device-width, initial-scale=1" />
+</head>
+<body>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Service</a></li>
+        <li><a href="#contact">Contact</a></li>    
+      </ul>
+    </nav>
+
+    <section id="about" class="about">
+        <div class="empty"></div>
+        <article>
+            <div class="title"><h1>Creative Developer</h1></div>
+            <div class="description"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consequuntur explicabo blanditiis molestias aliquid ut totam, animi fugiat, fugit aspernatur quidem eligendi, nemo hic? Eum, voluptatem! Harum deserunt laborum cumque.</p></div>    
+        </article>
+    </section>
+    
+    <section id="services" class="service service-html sticky">
+        <article>
+            <figure>
+                <img src="./resource/img/Rectangle 10.png" width="200px"/>
+            </figure>
+            <div class="text">
+                <h2>HTML</h2>
+                <p>Sed ut👋 perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+                <a href="https://www.wikipedia.org/">More About HTML</a>          
+            </div>
+        </article>
+    </section>
+
+
+    <section class="service service-css sticky">
+        <article>
+            <figure>
+                <img src="./resource/img/Polygon 1.png" width="200px"/>
+            </figure>
+            <div class="text">
+                <h2>CSS</h2>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+                <a href="https://www.wikipedia.org/">More About CSS</a>          
+            </div>
+        </article>
+    </section>
+
+
+    <section class="service service-js sticky">
+        <article>
+            <figure>
+                <img src="./resource/img/Polygon 2.png" width="200px"/>
+            </figure>
+            <div class="text">
+                <h2>JS</h2>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+                <a href="https://www.wikipedia.org/">More About JS</a>          
+            </div>
+        </article>
+    </section>
+
+
+    <section id="contact" class="contant full-screen">
+      <a href="mailto:yakkovberli@gmail.com">yakkovberli@gmail.com</a>
+    </section>
+
+    <script>
+        let emptyElement = document.querySelector('.about .empty');
+        let titleElement = document.querySelector('.about .title');
+
+        let figureElement = document.querySelectorAll('.service figure');
+
+
+        window.addEventListener( 'mousemove', handleMouseMove);
+
+        function handleMouseMove( event ) {
+
+            emptyElement.style.flexBasis = event.clientX + 'px';
+            titleElement.style.flexBasis = event.clientY / 2 + 'px';
+
+            figureElement.forEach( function( element ) {
+            element.style.flexBasis = window.innerWidth - event.clientX + 'px';
+        } );
+
+        }
+
+
+    </script>
+  
+</body>
+</html>
